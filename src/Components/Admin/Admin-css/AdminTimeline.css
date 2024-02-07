@@ -1,0 +1,101 @@
+.timeline{
+    position: relative;
+}
+.timeline ul li{
+    list-style-type: none;
+}
+.timeline ul li p{
+    font-size: 13px;
+}
+.timeline-btn button{
+    border-radius: 6px;
+    border-width: 0px;
+    color: rgb(55 153 155);
+    padding: .3rem 1rem;
+    background-color: transparent;
+}
+.timeline-chart-height{
+    min-height: 70vh;
+    max-height: 70vh;
+    overflow: scroll;
+}
+.create-timeline-heading input{
+    border: 1px solid rgb(55 153 155);
+    outline: none;
+}
+.create-timeline-heading button,.create-timeline-content button,.content-adding-btn button{
+    border-radius: 6px;
+    border-width: 0px;
+    background-color: rgb(55 153 155);
+    padding: .3rem 1rem;
+    color: white;
+}
+.create-timeline-content  input,.create-timeline-content textarea{
+    border: 1px solid rgb(55 153 155);
+    outline: none;
+    width: 100%;
+}
+.creating-relative{
+    position: relative;
+}
+.creating-sticky{
+    position: sticky;
+    top: 20px;
+}
+.creating-final-sticky{
+    position: sticky;
+    bottom: 40px;
+}
+.accordion-button {
+    display: inline!important;
+    width: auto!important;
+}
+.accordion-button:focus{
+    border-color:transparent!important;
+    box-shadow:none;
+}
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-width: 0!important;
+}
+.accordion-button{
+    width: 100%!important;
+    text-align: center;
+}
+.accordion-item {
+    border-width: 0!important;
+}
+@media (min-width: 786px){
+    .timeline ul li{
+        position: relative;
+        width: 50%;
+        margin-bottom: 50px;
+        padding: 1rem;
+    }
+    .timeline ul li:nth-child(odd){
+        float: left;
+        clear: right;
+        border-right: 2px dotted rgb(55 153 155);
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(-2px);
+        border-left: 2px dotted rgb(55 153 155);
+
+    }
+    .timeline ul li::after{
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: rgb(55 153 155);
+        border-radius: 50%;
+        top: 25px;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        right: -12px;
+    }
+    .timeline ul li:nth-child(even)::after{
+        left: -10px;
+    }
+}

@@ -1,0 +1,44 @@
+.people-img-backround{
+    /* background-color: rgb(55 153 155); */
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+.user-border-color{
+    border: 1px solid rgb(55 153 155);
+}
+.people-img-backround img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+.profile-button{
+    position: relative;
+}
+.profile-button button{
+    border: 1px solid rgb(55 153 155);
+    padding: .3rem 3rem .3rem 1.5rem;
+    width: 85%;
+    border-radius: 3rem;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+    font-size: .8rem;
+}
+.profile-button button:hover{
+    border: 1px solid #fff;
+    background-color: rgb(55 153 155);
+    color:white;
+}
+.profile-button-position{
+    position: absolute;
+    top: .65rem;
+    right: 1.8rem;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+}
+.profile-button:hover .profile-button-position{
+    color: white !important;;
+}
+.people-not-found{
+    min-height: 80vh;
+    max-height: 80vh;
+}

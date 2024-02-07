@@ -1,0 +1,57 @@
+.admin-picture img{
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+}
+.cursor{
+    cursor: pointer;
+}
+.menubar-button button{
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+.dialog-box-profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(55 153 155);
+}
+
+
+
+
+
+.myhome{
+    background-color: rgba(128, 128, 128, 0.096);
+}
+.myperformance{
+    background-color: rgba(128, 128, 128, 0.096);
+    min-height: 91vh;
+    max-height: 91vh;
+    overflow: scroll;
+}
+.friends-performance-border{
+    border: 1px solid rgb(55 153 155);
+}
+.myproject{
+    min-height: 30vh;
+    max-height: 30vh;
+    background-color: rgb(55 153 155);
+}
+.noProjects-available{
+    min-height: 25vh;
+    max-height: 25vh;
+}
+.project-description{
+    min-height: 6rem;
+    max-height: 6rem;
+    overflow: hidden;
+}
+
+.text-color{
+    color:rgb(55 153 155)
+}
+.pointer{
+    cursor: pointer;
+}

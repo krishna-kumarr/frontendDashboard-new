@@ -1,0 +1,10 @@
+.user-timeline-chart-height{
+    min-height: 80vh;
+    max-height: 80vh;
+}
+.CircularProgressbar .CircularProgressbar-text{
+    fill:rgb(55 153 155) !important;
+}
+.CircularProgressbar .CircularProgressbar-path{
+    stroke: rgb(55 153 155) !important;
+}

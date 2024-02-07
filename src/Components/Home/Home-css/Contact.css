@@ -1,0 +1,25 @@
+.contact-box{
+    height: calc(95vh - 5vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.sendingmail input{
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.123);
+}
+textarea{
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.123);
+    padding: 20px;
+    outline: none;
+}
+.sendingmail button{
+    border-width: 0px;
+    padding: 5px 20px;
+    background-color: rgb(55 153 155);
+    color: white;
+}

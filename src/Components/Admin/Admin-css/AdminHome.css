@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Rajdhani&display=swap');
+.admin-picture img{
+    width: 30px;
+    height: 30px;
+    border-radius: 12px;
+}
+.cursor{
+    cursor: pointer;
+}
+.menubar-button button{
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+}
+.dialog-box-profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgb(55 153 155);
+}
+
+.admin-welcome-content{
+    font-family: 'Italianno', cursive;
+    font-family: 'Rajdhani', sans-serif;
+}
+.recent-activites,.users-overall-performance{
+    min-height: 70vh;
+    max-height: 70vh;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+table,tr,th,td{
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    text-align: center;
+    padding: 10px;
+}
+.recentActivity img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.overall-view-admin{
+    border: 1px solid rgb(55 153 155);
+}
+.pointer{
+    cursor: pointer;
+    transition:all .2s ease-in-out
+}
+.pointer:hover{
+    color: rgb(55 153 155);
+}

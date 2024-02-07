@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --div-height:100vh;
+    --nav-height:95vh;
+}
+.nav-height{
+    min-height: calc(var(--div-height) - 95vh)!important;
+} 
+.home-height{
+    min-height: calc(var(--div-height) - 5vh)!important;
+}
+.navbar-brand,.active{
+    color: rgb(55 153 155);
+}
+.navbar-brand span{
+    font-size: 14px;
+    padding-left: 1rem;
+}
+.li-navbar-link a{
+    color: gray;
+}
+.navbar-brand:hover{
+    color: rgb(62, 220, 223);
+}
+a{
+    text-decoration: none;
+}

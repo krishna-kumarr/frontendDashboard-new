@@ -1,0 +1,29 @@
+.security-practice-chart-height{
+    min-height: 85vh;
+    max-height: 85vh;
+}
+.set-solving-height{
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    overflow: hidden;
+    font-size: .8rem;
+}
+.read-more-btn{
+    background-color: rgb(55 153 155);
+    padding: .2rem .5rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.security-practice-modal-content{
+    min-height: 80vh;
+    max-height: 80vh;
+    overflow: scroll;
+}
+.set-solving-model{
+    font-size: .85rem;
+}
+.add-securityPractices-btn,.add-types-btn{
+    background-color: rgb(55 153 155);
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+}

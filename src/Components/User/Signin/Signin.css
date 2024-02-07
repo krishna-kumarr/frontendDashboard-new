@@ -1,0 +1,43 @@
+:root{
+    --div-height:100vh;
+    --nav-height:95vh;
+}
+.form-element input{
+    padding: .5rem 1rem;
+    border-radius: 6px;
+    border-width: 0px;
+    outline: none;
+    border:1px solid rgba(128, 128, 128, 0.253);
+}
+.form-button button{
+    border-radius: 6px;
+    border-width: 0px;
+    background-color: rgb(55 153 155);
+    padding: .3rem 1rem;
+    color: white;
+}
+.leftSide-signin{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.rightSide-signIn{
+    border: 1px solid rgba(128, 128, 128, 0.212);
+    border-radius: 20px 0 0 20px;
+    height: calc(var(--div-height) - 5vh);
+    color:white;
+    background-color: rgb(55 153 155);
+}
+.rightSide-content{
+    height: calc(var(--div-height) - 5vh);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+   
+}
+.register{
+    color: rgb(55 153 155);
+    cursor: pointer;
+}
