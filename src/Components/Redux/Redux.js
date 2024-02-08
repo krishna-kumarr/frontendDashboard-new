@@ -243,7 +243,12 @@ export const Slice = createSlice({
                 therory:"Implement strong user authentication and authorization mechanisms. Ensure that only authorized users can access sensitive parts of your frontend",
                 reference:"https://blog.logrocket.com/best-practices-for-managing-and-storing-secrets-in-frontend-development/"
             }
-        ]
+        ],
+        message:[{
+            name:"Admin",
+            message:[],
+            count:0
+        }]
     },
     reducers:{
         updateAdmin:(state,action)=>{
@@ -266,9 +271,12 @@ export const Slice = createSlice({
         },
         updateSecurityPractices:(state,action)=>{
             state.securityPractices = action.payload
+        },
+        updateMessage:(state,action)=>{
+            state.message = action.payload
         }
     }
 })
 
 export default Slice.reducer;
-export const{updateName,updateAdminLogin,updateUsersArray,updateuserLogin,updateTimelineArray,updateUserAccessTimeLineArray,updateSecurityPractices} = Slice.actions
+export const{updateName,updateAdminLogin,updateUsersArray,updateuserLogin,updateTimelineArray,updateUserAccessTimeLineArray,updateSecurityPractices,updateMessage} = Slice.actions

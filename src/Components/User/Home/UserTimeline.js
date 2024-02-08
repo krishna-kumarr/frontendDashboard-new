@@ -123,7 +123,7 @@ export const UserTimeline = () =>{
                                 <div className="accordion mt-2" id="accordionExample">
                                     {
                                         timelineArray.map((val,ind)=>{
-                                                return <div className="accordion-item bg-transparent text-center border-top py-3 col-12" key={ind}>
+                                                return <div className="accordion-item bg-transparent text-center py-3 col-12" key={ind}>
                                                         <h4 className="accordion-header" id={"heading"+ind}>
                                                         <button className="accordion-button bg-transparent text-start" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse"+ind} aria-expanded={ind==0 ?"true" : "false"} aria-controls={"collapse"+ind}>
                                                             {ind+1} .{val.title}
@@ -135,40 +135,103 @@ export const UserTimeline = () =>{
                                                                     {
                                                                         val.TimeLineCharts.map((value,index)=>{
                                                                             return  <li className="m-0" key={index}>
-                                                                                        <div className="shadow timeline-content p-4">
-                                                                                            <h5>{value.heading}</h5>
-                                                                                            <p>{value.textareaCnt}</p>
-                                                                                            <div className="col-12 d-flex flex-wrap justify-content-end">
-                                                                                                {value.startedOn!==undefined && value.startedOn.length>0 ? <p className="text-warning">started on: {value.startedOn}</p> : null}
-                                                                                                {value.completedOn!==undefined && value.completedOn.length>0 ? <p className="text-success">completed on: {value.completedOn}</p> : null}
-
-                                                                                                
-                                                                                                <select className="col-3" onChange={(e)=>handleUpdateUserTimeline(e,value.heading,val.title)}>
+                                                                                        <div className="shadow timeline-content p-4 col-12 d-flex flex-wrap align-items-center">
+                                                                                        {
+                                                                                            index%2===0 ?
+                                                                                                <>  
                                                                                                     {
-                                                                                                        value.status==="not started" ?
-                                                                                                            <option selected>Not-started</option>
+                                                                                                        value.image===undefined ?  
+                                                                                                             null
                                                                                                         :
-                                                                                                            <option value="not started">Not-started</option>
-
+                                                                                                            <div className="col-4">
+                                                                                                                <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
+                                                                                                            </div>
                                                                                                     }
+                                                                                                   
+                                                                                                    <div className={value.image===undefined ? "col-12" : "col-8"}>
+                                                                                                        <h5>{value.heading}</h5>
+                                                                                                        <p>{value.textareaCnt}</p>
+                                                                                                        <div className="col-12 d-flex flex-wrap justify-content-center">
+                                                                                                            {value.startedOn!==undefined && value.startedOn.length>0 ? <p className="text-warning">started on: {value.startedOn}</p> : null}
+                                                                                                            {value.completedOn!==undefined && value.completedOn.length>0 ? <p className="text-success">completed on: {value.completedOn}</p> : null}
 
+                                                                                                            
+                                                                                                            <select className={value.image===undefined ? "col-3":"col-6"} onChange={(e)=>handleUpdateUserTimeline(e,value.heading,val.title)}>
+                                                                                                                {
+                                                                                                                    value.status==="not started" ?
+                                                                                                                        <option selected>Not-started</option>
+                                                                                                                    :
+                                                                                                                        <option value="not started">Not-started</option>
+
+                                                                                                                }
+
+                                                                                                                {
+                                                                                                                    value.status==="inProgress" ?
+                                                                                                                        <option selected>in-progress</option>
+                                                                                                                    :
+                                                                                                                        <option value="inProgress">in-progress</option>
+
+                                                                                                                }
+
+                                                                                                                {
+                                                                                                                    value.status==="completed" ?
+                                                                                                                        <option selected>completed</option>
+                                                                                                                    :
+                                                                                                                        <option value="completed">completed</option>
+
+                                                                                                                }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </>
+                                                                                            :
+                                                                                                <>
+                                                                                                    <div className={value.image===undefined ? "col-12" : "col-8"}>
+                                                                                                        <h5>{value.heading}</h5>
+                                                                                                        <p>{value.textareaCnt}</p>
+                                                                                                        <div className="col-12 d-flex flex-wrap justify-content-center">
+                                                                                                            {value.startedOn!==undefined && value.startedOn.length>0 ? <p className="text-warning">started on: {value.startedOn}</p> : null}
+                                                                                                            {value.completedOn!==undefined && value.completedOn.length>0 ? <p className="text-success">completed on: {value.completedOn}</p> : null}
+
+                                                                                                            
+                                                                                                            <select className={value.image===undefined ? "col-3":"col-6"} onChange={(e)=>handleUpdateUserTimeline(e,value.heading,val.title)}>
+                                                                                                                {
+                                                                                                                    value.status==="not started" ?
+                                                                                                                        <option selected>Not-started</option>
+                                                                                                                    :
+                                                                                                                        <option value="not started">Not-started</option>
+
+                                                                                                                }
+
+                                                                                                                {
+                                                                                                                    value.status==="inProgress" ?
+                                                                                                                        <option selected>in-progress</option>
+                                                                                                                    :
+                                                                                                                        <option value="inProgress">in-progress</option>
+
+                                                                                                                }
+
+                                                                                                                {
+                                                                                                                    value.status==="completed" ?
+                                                                                                                        <option selected>completed</option>
+                                                                                                                    :
+                                                                                                                        <option value="completed">completed</option>
+
+                                                                                                                }
+                                                                                                            </select>
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                     {
-                                                                                                        value.status==="inProgress" ?
-                                                                                                            <option selected>in-progress</option>
+                                                                                                        value.image===undefined ?  
+                                                                                                             null
                                                                                                         :
-                                                                                                            <option value="inProgress">in-progress</option>
-
+                                                                                                            <div className="col-4">
+                                                                                                                <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
+                                                                                                            </div>
                                                                                                     }
-
-                                                                                                    {
-                                                                                                        value.status==="completed" ?
-                                                                                                            <option selected>completed</option>
-                                                                                                        :
-                                                                                                            <option value="completed">completed</option>
-
-                                                                                                    }
-                                                                                                </select>
-                                                                                            </div>
+                                                                                                </>
+                                                                                        }
+                                                                                           
                                                                                         </div>
                                                                                     </li>
                                                                         })

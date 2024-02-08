@@ -3,25 +3,26 @@
     padding: 0px;
     box-sizing: border-box;
 }
-.nav-bg{
-    background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
 }
 .dashboard-pointer,.dashboard-pointer-signin,.navbar-brand{
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
-.navbar-brand:hover{
-    color: blueviolet;
+.dashboard-pointer-signin:hover,.dashboard-pointer:hover,.navbar-brand:hover{
+    color: var(--imp-heading-color);
+    font-weight: 500;
 }
-.dashboard-pointer:hover{
-    color: white;
-}
-.dashboard-pointer-signin:hover{
-    color: blueviolet;
+.navbar{
+    z-index: 10;
+    background-color: whitesmoke;
 }
 .navbar-brand{
     cursor: pointer;
-    color: white;
+    color: var(--imp-heading-color);
 }
 .navbar-brand span{
     font-size: 14px;

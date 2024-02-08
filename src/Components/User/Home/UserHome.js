@@ -29,8 +29,9 @@ export const UserHomePage = () =>{
         setUserDetails(...State.userLogin)
 
         //2. setting home button active
-        var a =document.querySelectorAll('.nav-link')
-        console.log(a)
+        if(State.userLogin[0].requesToAdmin=="accepted"){
+            document.querySelectorAll('.nav-link')[0].classList.add('active');
+        }
         
 
         //3. making fiends overall performance
@@ -82,7 +83,7 @@ export const UserHomePage = () =>{
     return(
         <>
             {
-                userDetails.requesToAdmin==="accepted" ?
+                State.userLogin[0].requesToAdmin==="accepted" ?
                     <div className="d-flex flex-wrap">
                         {/* admin sidebar */}
                         <UserSidebar/>
@@ -95,7 +96,7 @@ export const UserHomePage = () =>{
                                 <div className="col-12 d-flex flex-wrap">
                                     <div className="col-12 col-md-12 col-lg-6 p-3">
                                         <div className="myhome border rounded p-5">
-                                            <h4 className="text-color">Hii {userDetails.firstName} {userDetails.lastName}</h4>
+                                            <h4 className="text-color">Hii <span className="">{userDetails.firstName} {userDetails.lastName}</span></h4>
                                             <p className="text-color text-secondary">Be happy and start your journey</p>
 
                                             <div className="col-12 d-flex flex-wrap mt-5">

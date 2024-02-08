@@ -28,7 +28,7 @@ export const AdminHome = () =>{
                                 {/* welcome box  */}
                                 <div className="col-12 d-flex flex-wrap justify-content-center">
                                     <div className="col-6 text-center text-secondary">
-                                        <h1>Hi <span className="text-light">{State.AdminLogin}</span></h1>
+                                        <h1>Hi <span className="important-heading">{State.AdminLogin}</span></h1>
                                         <p>welcome back to your admin dashboard</p>
                                     </div>
                                 </div>

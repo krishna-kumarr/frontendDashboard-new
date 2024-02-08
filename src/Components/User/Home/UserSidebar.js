@@ -29,8 +29,8 @@ export const UserSidebar = () =>{
                                 <p className="fw-bold">Quick Links</p>
                             </li>
                             {/* user/home-page */}
-                            <li className="nav-item p-0 my-2 col-12" role="presentation" onClick={()=>pageRender("/user/home-page")}>
-                                <div className="nav-link user-sidebar-link logo ps-3">
+                            <li className="nav-item p-0 my-2 user-sidebar-link col-12" role="presentation" onClick={()=>pageRender("/user/home-page")}>
+                                <div className="nav-link logo ps-3">
                                     <div className="col-3 logo-icon">
                                         <AiTwotoneHome className="fs-4"/>
                                     </div>

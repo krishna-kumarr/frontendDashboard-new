@@ -1,10 +1,16 @@
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
+    --rightSide-bg-color:rgb(55 153 155 / 85%);
+}
 .people-img-backround{
     /* background-color: rgb(55 153 155); */
     border-bottom-left-radius: 22px;
     border-bottom-right-radius: 22px;
 }
 .user-border-color{
-    border: 1px solid white;
+    border: 1px solid var(--border-color);
 }
 .people-img-backround img{
     width: 7rem;
@@ -15,18 +21,18 @@
     position: relative;
 }
 .profile-button button{
-    border: 1px solid white;
+    border: 1px solid var(--border-color);
     padding: .3rem 3rem .3rem 1.5rem;
     width: 85%;
     border-radius: 3rem;
     background-color: transparent;
     transition: all .1s ease-in-out;
     font-size: .8rem;
-    color: #fff;
+    outline: none;
 }
 .profile-button button:hover{
     border: 1px solid #fff;
-    background-color: blueviolet;
+    background-color: var(--btn-background);
     color:white;
 }
 .profile-button-position{

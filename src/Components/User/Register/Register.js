@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../Home/Navbar";
 import "../../Home/Home-css/Home.css";
 
 import "../Signin/Signin.css"
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { updateUserAccessTimeLineArray, updateUsersArray } from "../../Redux/Redux";
+import { updateMessage, updateUserAccessTimeLineArray, updateUsersArray } from "../../Redux/Redux";
 
 
 export const Register = () =>{
@@ -37,8 +37,6 @@ export const Register = () =>{
     })
 
 
-
-
     const handleRegisterIP = (event) =>{
         setRegData({...regData,[event.target.name]:event.target.value,dateOfJoining:String(new Date()),id:State.usersArray.length,lastOnline:String(new Date())})
     }
@@ -46,6 +44,11 @@ export const Register = () =>{
 
         var addUsers = [...State.usersArray]
         var userAccessTimeLineArray = [...State.userAccessTimeLineArray]
+        var messageObject = {
+            name:"",
+            message:[],
+            count:0
+        }
 
         if(regData.firstName!=="" && regData.lastName!=="" && regData.userName!=="" && regData.email!=="" && regData.password!=="" && regData.confirmPassword!==""){
             if(regData.password===regData.confirmPassword){
@@ -73,6 +76,22 @@ export const Register = () =>{
                             }
                             addUsers[addUsers.length]=regData
                             dispatch(updateUsersArray(addUsers))
+
+                        // //message code
+                        //     var list2=[]
+                        //     for(var a=0;a<State.message.length;a++){
+                        //         var spreadExistingUserObject={...State.message[a]}
+                        //         var spreadExistingUserArray=[...spreadExistingUserObject.message]
+                        //         for(var b=0;b<addUsers.length;b++){
+                        //             var obj3 = {[addUsers[b].userName]:[]}
+                        //             spreadExistingUserArray.push(obj3)
+                        //             spreadExistingUserObject.message=spreadExistingUserArray 
+                        //         }
+                        //         list2[list2.length]=spreadExistingUserObject //Existing User message array name addition
+                        //     }
+                        //     console.log(list2)
+                        //     dispatch(updateMessage(list2))
+
                             alert("registration success")
                             pageRender("/user/signIn")
                         }
@@ -113,6 +132,26 @@ export const Register = () =>{
                     }
                     addUsers[addUsers.length]=regData
                     dispatch(updateUsersArray(addUsers))
+
+                // //message code
+                //     var list=[]
+                //     var spreadMessage={...State.message[0]}
+                //     var spreadMessageZero=[...spreadMessage.message]
+                //     var obj1 = {[regData.userName]:[]}
+                //     spreadMessageZero.push(obj1)
+                //     spreadMessage.message=spreadMessageZero 
+                //     list[list.length]=spreadMessage //for admin
+
+                //     var NewUserObject={...messageObject} 
+                //     var spreadNewUserMessage=[...NewUserObject.message]
+                //     NewUserObject.name=regData.userName
+                //     var obj2 ={"admin":[]}
+                //     spreadNewUserMessage.push(obj2)
+                //     NewUserObject.message=spreadNewUserMessage
+                //     list[list.length]=NewUserObject //for user
+                //     dispatch(updateMessage(list))
+
+
                     alert("registration success")
                     pageRender("/user/signIn")
                 }
@@ -134,6 +173,7 @@ export const Register = () =>{
                 setErr(false)
             },2000)
         }
+        console.log(State)
     }
 
     return(

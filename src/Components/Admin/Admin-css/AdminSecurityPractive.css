@@ -21,8 +21,8 @@
     cursor: pointer;
 }
 .security-practice-modal-content{
-    min-height: 60vh;
-    max-height: 60vh;
+    min-height: 70vh;
+    max-height: 70vh;
     overflow: scroll;
 }
 .set-solving-model{

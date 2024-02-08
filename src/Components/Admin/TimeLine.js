@@ -29,10 +29,10 @@ export const Timeline = () =>{
                     
                     <div className="col-12 container d-flex justify-content-center mt-5">
                         <div className="col-12 col-md-6 d-flex flex-wrap justify-content-center">
-                            <div className="col-12 col-md-6 text-center timeline-btn">
+                            <div className="col-12 col-md-12 col-lg-6 my-2 text-center timeline-btn">
                                 <button type="button" onClick={()=>pageRender("/admin-home/time-line")}>Existing Timeline</button>
                             </div>
-                            <div className="col-12 col-md-6 text-center timeline-btn">
+                            <div className="col-12 col-md-12 col-lg-6 my-2 text-center timeline-btn">
                                 <button type="button" onClick={()=>pageRender("/admin-home/time-line/create-timeline")}>Create new timeline</button>
                             </div>
                         </div>
@@ -59,24 +59,35 @@ export const Timeline = () =>{
                                                                                     <div className="shadow timeline-content p-4 col-12 d-flex flex-wrap align-items-center">
                                                                                         {
                                                                                             index%2===0 ?
-                                                                                                <>
-                                                                                                    <div className="col-4">
-                                                                                                        <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
-                                                                                                    </div>
-                                                                                                    <div className="col-8">
+                                                                                                <>  
+                                                                                                    {
+                                                                                                        value.image===undefined ?  
+                                                                                                             null
+                                                                                                        :
+                                                                                                            <div className="col-4">
+                                                                                                                <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
+                                                                                                            </div>
+                                                                                                    }
+                                                                                                   
+                                                                                                    <div className={value.image===undefined ? "col-12" : "col-8"}>
                                                                                                         <h5>{value.heading}</h5>
                                                                                                         <p>{value.textareaCnt}</p>
                                                                                                     </div>
                                                                                                 </>
                                                                                             :
                                                                                                 <>
-                                                                                                    <div className="col-8">
+                                                                                                    <div className={value.image===undefined ? "col-12" : "col-8"}>
                                                                                                         <h5>{value.heading}</h5>
                                                                                                         <p>{value.textareaCnt}</p>
                                                                                                     </div>
-                                                                                                    <div className="col-4">
-                                                                                                        <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
-                                                                                                    </div>
+                                                                                                    {
+                                                                                                        value.image===undefined ?  
+                                                                                                             null
+                                                                                                        :
+                                                                                                            <div className="col-4">
+                                                                                                                <img src={value.image} alt="timeline-image" className="timeeline-card-image"/>
+                                                                                                            </div>
+                                                                                                    }
                                                                                                 </>
                                                                                         }
                                                                                     </div>

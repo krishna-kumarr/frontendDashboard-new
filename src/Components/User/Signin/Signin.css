@@ -1,4 +1,9 @@
-
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
+    --rightSide-bg-color:rgb(55 153 155 / 85%);
+}
 .form-element input{
     padding: .5rem 1rem;
     border-radius: 6px;
@@ -9,9 +14,9 @@
 .form-button button{
     border-radius: 6px;
     border-width: 0px;
-    background-color: white;
     padding: .3rem 1rem;
-    color: blueviolet;
+    color: white;
+    background-color: var(--btn-background);
 }
 .leftSide-signin{
     display: flex;
@@ -20,21 +25,21 @@
 
 }
 .rightSide-signIn{
-    border: 1px solid rgba(128, 128, 128, 0.212);
+    border: 1px solid var(--border-color);
     border-radius: 20px 0 0 20px;
-    height: 95vh;
+    height: 95vh; 
     color:white;
-    background-color: rgba(245, 245, 245, 0.082);
+    background-color: var(--rightSide-bg-color);
+    /* background-color: rgba(245, 245, 245, 0.082); */
 }
 .rightSide-content{
     height: 95vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-   
+    align-items: center;   
 }
 .register{
-    color: rgb(176, 97, 212);
+    color: var(--imp-heading-color);
     cursor: pointer;
 }

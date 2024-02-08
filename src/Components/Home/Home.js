@@ -10,7 +10,7 @@ export const Home = () =>{
                 <Navbar/>
                 <div className="container-fluid">
                     <div className="row justify-content-center align-items-center home-content">
-                        <div className="col-12 col-md-10 col-lg-5 text-center text-light">
+                        <div className="col-12 col-md-10 col-lg-5 text-center">
                             <h1>Welcome To</h1>
                             <p>Frontend Development dashboard</p>
                         </div>

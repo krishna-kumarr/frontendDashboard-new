@@ -6,6 +6,7 @@ import { updateUsersArray } from "../Redux/Redux";
 import { AiOutlineMessage } from "react-icons/ai";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import "./Admin-css/AdminNavbar.css"
 
 export const Dashboard= () =>{
     const State = useSelector(
@@ -20,6 +21,8 @@ export const Dashboard= () =>{
             return v.requesToAdmin!=="accepted"
         })
         setMessCount(messageCount.length)
+
+        
     })
 
     const handleHideSidebar = () =>{
@@ -91,7 +94,7 @@ export const Dashboard= () =>{
                             <div className="d-flex flex-wrap justify-content-end align-items-center">
                                 {/* message  */}
                                 <div className="col-lg-2 col-xl-1 text-light text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropMessage">
-                                    <IoMdNotificationsOutline className="fs-3"/>
+                                    <IoMdNotificationsOutline className="fs-3 text-secondary"/>
                                     {   
                                         messCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -103,7 +106,7 @@ export const Dashboard= () =>{
                                 </div>
                                 {/* notification  */}
                                 <div className="col-lg-2 col-xl-1 text-light text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropNotification">
-                                    <AiOutlineMessage className="fs-3"/>
+                                    <AiOutlineMessage className="fs-3 text-secondary"/>
                                     {   
                                         notifyCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -172,7 +175,14 @@ export const Dashboard= () =>{
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
-                                ...
+                                <div className="col-12 ps-5 d-flex flex-wrap message-box-height">
+                                    <div className="col-5 position-sticky top-0">
+
+                                    </div>
+                                    <div className="col-7">
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

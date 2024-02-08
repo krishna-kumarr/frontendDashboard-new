@@ -1,11 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap'); */
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
+}
+
 .home-content{
-    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Great Vibes', cursive; */
     height: 90vh;
+    color:var(--imp-heading-color);
 }
 .home-content h1{
-    font-size: 4rem;
+    font-size: 2rem;
 }
 .home-content p{
-    font-size: 2.5rem;
+    font-size: 1rem;
 }
