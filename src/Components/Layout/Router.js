@@ -13,6 +13,7 @@ import { ExistingTimeline } from "../Admin/CreateTimeline";
 import { Peoples } from "../User/Home/Peoples";
 import { UserTimeline } from "../User/Home/UserTimeline";
 import { AdminSecurityPractices } from "../Admin/AdminSecurityPractice";
+import { UserSecurityPractice } from "../User/Home/UserSecurityPractices";
 
 export const PageRedirector = () => {
 
@@ -40,6 +41,7 @@ export const PageRedirector = () => {
                     <Route path="home-page" element={<UserHomePage/>}/>
                     <Route path="peoples" element={<Peoples/>}/>
                     <Route path="timeline" element={<UserTimeline/>}/>
+                    <Route path="user-security-practice" element={<UserSecurityPractice/>}/>
 
                 </Route>
 

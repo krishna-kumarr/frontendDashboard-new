@@ -83,7 +83,7 @@ export const Signin = () =>{
 
                         <div className="col-12 col-md-6 p-5 leftSide-signin">
                             <div className="col-12 text-center">
-                                <h1 className="col-12">Sign in</h1>
+                                <h1 className="col-12">Users Log-in</h1>
                             </div>
                             <form className="col-12 col-md-6 d-flex flex-wrap">
                                 {err && errType!=="" ? <p className="text-danger m-0 mt-3 col-12 text-center">{errType}</p> : null}

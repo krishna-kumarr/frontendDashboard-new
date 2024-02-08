@@ -27,19 +27,19 @@ export const AdminHome = () =>{
                             <div className="container-fluid d-flex flex-wrap">
                                 {/* welcome box  */}
                                 <div className="col-12 d-flex flex-wrap justify-content-center">
-                                    <div className="col-6 text-center admin-welcome-content">
-                                        <h1>Welcome <span className="text-success">{State.AdminLogin}</span></h1>
-                                        <p>This is admin dashboard</p>
+                                    <div className="col-6 text-center text-secondary">
+                                        <h1>Hi <span className="text-light">{State.AdminLogin}</span></h1>
+                                        <p>welcome back to your admin dashboard</p>
                                     </div>
                                 </div>
 
                                 {/* Recent activity  */}
                                 <div className="col-12 col-md-12 col-lg-5 p-3">
-                                    <div className="border rounded p-4 bg-light recent-activites">
+                                    <div className="border rounded p-4 bg-transparent recent-activites">
                                         <h5 className="border-bottom pb-2">Recent Activities</h5>
                                         
                                         {State.usersArray.map((val,ind)=>{
-                                            return <div className="col-12 d-flex flex-wrap align-items-center border-bottom my-2">
+                                            return <div className="col-12 d-flex flex-wrap align-items-center border-bottom p-2 mt-3 text-secondary">
                                                         <div className="col-2 recentActivity">
                                                             <img src="https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg" alt="user_image" />
                                                         </div>
@@ -57,7 +57,7 @@ export const AdminHome = () =>{
                                 
                                 {/* user overall performance  */}
                                 <div className="col-12 col-md-12 col-lg-7 p-3">
-                                        <div className="bg-light users-overall-performance border rounded p-4">
+                                        <div className="bg-transparent users-overall-performance border rounded p-4">
                                             <h5 className="border-bottom pb-2 col-12">Users overall performance</h5>
                                             <div className="col-12 d-flex flex-wrap">
                                                 {

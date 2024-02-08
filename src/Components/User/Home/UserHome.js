@@ -28,10 +28,10 @@ export const UserHomePage = () =>{
         //1. setting logged user details
         setUserDetails(...State.userLogin)
 
-        //2. setting van button active
-        if(State.userLogin.requesToAdmin==="accepted"){
-            document.querySelectorAll('.nav-link')[0].classList.add('active');
-        }
+        //2. setting home button active
+        var a =document.querySelectorAll('.nav-link')
+        console.log(a)
+        
 
         //3. making fiends overall performance
         var getFriendList=[...State.userLogin[0].friendsArray]
@@ -96,18 +96,18 @@ export const UserHomePage = () =>{
                                     <div className="col-12 col-md-12 col-lg-6 p-3">
                                         <div className="myhome border rounded p-5">
                                             <h4 className="text-color">Hii {userDetails.firstName} {userDetails.lastName}</h4>
-                                            <p className="text-color">Be happy and start your journey</p>
+                                            <p className="text-color text-secondary">Be happy and start your journey</p>
 
                                             <div className="col-12 d-flex flex-wrap mt-5">
-                                                <div className="col-12 col-sm-6 col-md-4 border-start px-3 border-dark">
+                                                <div className="col-12 col-sm-6 col-md-4 px-3">
                                                     <h6>Total Tasks</h6>
                                                     <p className="text-center col-6 m-0">{taskStatus.total_task}</p>
                                                 </div>
-                                                <div className="col-12 col-sm-6 col-md-4 border-start px-3 border-dark">
+                                                <div className="col-12 col-sm-6 col-md-4 border-start px-3 border-light">
                                                     <h6>Task in progress</h6>
                                                     <p className="text-center col-6 m-0">{taskStatus.task_in_progess}</p>
                                                 </div>
-                                                <div className="col-12 col-sm-6 col-md-4 border-start px-3 border-dark">
+                                                <div className="col-12 col-sm-6 col-md-4 border-start px-3 border-light">
                                                     <h6>Completed Tasks</h6>
                                                     <p className="text-center col-6 m-0">{taskStatus.task_completed}</p>
                                                 </div>
@@ -179,10 +179,10 @@ export const UserHomePage = () =>{
                         <div className="col-12 col-md-6 col-lg-5 col-xl-4 text-center text-secondary border rounded p-5">
                             <h1>Hello</h1>
                             <p className="mt-3">
-                                <span className="pe-1 text-warning">{userDetails.firstName} {userDetails.lastName}</span>
+                                <span className="pe-1 text-danger">{userDetails.firstName} {userDetails.lastName}</span>
                                 you need to wait for some time until our admin verify your account
                             </p>
-                            <button type="button" className="btn btn-warning text-light" onClick={()=>pageRender("/")}>Return to Home page</button>
+                            <button type="button" className="btn btn-danger text-light" onClick={()=>pageRender("/user/signIn")}>Return to Home page</button>
                         </div>
                     </div>
             }

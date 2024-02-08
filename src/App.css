@@ -1,3 +1,10 @@
 body{
   scroll-behavior: smooth;
+  /* background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%); 
+  color:white; */
+}
+:root{
+  --btn-background:rgb(55 153 155);
+  --border-color:rgb(55 153 155);
+  --imp-heading-color:rgb(55 153 155);
 }

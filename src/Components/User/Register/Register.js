@@ -146,7 +146,7 @@ export const Register = () =>{
                     <div className="row align-items-center home-height">
                         <div className="col-12 col-md-6 p-5 leftSide-signin">
                             <div className="col-12 text-center">
-                                <h1 className="col-12">Register</h1>
+                                <h1 className="col-12">User Registration</h1>
                             </div>
                             <form className="col-12 col-md-10 d-flex flex-wrap">
                                 {err && errType!=="" ? <p className="text-danger col-12 text-center">{errType}</p> : null}

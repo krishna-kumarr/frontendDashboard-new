@@ -3,18 +3,25 @@
     padding: 0px;
     box-sizing: border-box;
 }
-:root{
-    --div-height:100vh;
-    --nav-height:95vh;
+.nav-bg{
+    background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
 }
-.nav-height{
-    min-height: calc(var(--div-height) - 95vh)!important;
-} 
-.home-height{
-    min-height: calc(var(--div-height) - 5vh)!important;
+.dashboard-pointer,.dashboard-pointer-signin,.navbar-brand{
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
-.navbar-brand,.active{
-    color: rgb(55 153 155);
+.navbar-brand:hover{
+    color: blueviolet;
+}
+.dashboard-pointer:hover{
+    color: white;
+}
+.dashboard-pointer-signin:hover{
+    color: blueviolet;
+}
+.navbar-brand{
+    cursor: pointer;
+    color: white;
 }
 .navbar-brand span{
     font-size: 14px;
@@ -22,9 +29,6 @@
 }
 .li-navbar-link a{
     color: gray;
-}
-.navbar-brand:hover{
-    color: rgb(62, 220, 223);
 }
 a{
     text-decoration: none;

@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-:root{
-    --nav-height:4vh;
-}
 .home-content{
     font-family: 'Great Vibes', cursive;
     height: 90vh;
-    color: rgb(55 153 155);
 }
 .home-content h1{
     font-size: 4rem;

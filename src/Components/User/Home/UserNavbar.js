@@ -3,7 +3,7 @@ import { TiTickOutline } from "react-icons/ti";
 import { ImCancelCircle } from "react-icons/im";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { AiTwotoneMessage } from "react-icons/ai";
+import { AiOutlineMessage } from "react-icons/ai";
 import { updateUsersArray, updateuserLogin } from "../../Redux/Redux";
 import { useDispatch, useSelector } from "react-redux";
 import "./user-home-css/userNavbar.css"
@@ -99,7 +99,7 @@ export const UserNavbar = () =>{
     return(
         <>
             <div className="col-12 position-sticky top-0">
-                <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+                <nav className="navbar navbar-expand-lg bg-transparent border-bottom">
                     <div className="container-fluid">
                         {/* sidebar reducer toggle button  */}
                         <div className="col-5 col-lg-1">
@@ -135,7 +135,7 @@ export const UserNavbar = () =>{
                                 
                                 {/* notification  */}
                                 <div className="col-lg-2 col-xl-1 text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropMessage">
-                                    <AiTwotoneMessage className="fs-3 text-secondary "/>
+                                    <AiOutlineMessage className="fs-3"/>
                                     {   
                                         messCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -147,7 +147,7 @@ export const UserNavbar = () =>{
                                 </div>
                                 {/* notification  */}
                                 <div className="col-lg-2 col-xl-1 text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropNotification">
-                                    <IoMdNotificationsOutline className="fs-3 text-secondary "/>
+                                    <IoMdNotificationsOutline className="fs-3"/>
                                     {   
                                         notifyCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -175,7 +175,7 @@ export const UserNavbar = () =>{
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Message</h1>
+                                <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Message</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -208,7 +208,7 @@ export const UserNavbar = () =>{
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h1 className="modal-title fs-5" id="staticBackdropLabel">Notifications</h1>
+                                <h1 className="modal-title fs-5 text-dark" id="staticBackdropLabel">Notifications</h1>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
@@ -219,7 +219,7 @@ export const UserNavbar = () =>{
                                                 return val.status==="requested" ? <div className="col-12 col-md-6 col-lg-3 d-flex flex-wrap border p-3 m-1" key={ind}>
                                                                 <p className="col-12 text-center text-warning">Friend request</p>
                                                                 <div className="col-6 text-center">
-                                                                    <p className="m-0">{val.friendId}</p>
+                                                                    <p className="m-0 text-dark">{val.friendId}</p>
                                                                 </div>
                                                                 <div className="col-6 d-flex flex-wrap ">
                                                                     <div className="col-6 text-center">

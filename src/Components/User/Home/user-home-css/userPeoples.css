@@ -4,7 +4,7 @@
     border-bottom-right-radius: 22px;
 }
 .user-border-color{
-    border: 1px solid rgb(55 153 155);
+    border: 1px solid white;
 }
 .people-img-backround img{
     width: 7rem;
@@ -15,17 +15,18 @@
     position: relative;
 }
 .profile-button button{
-    border: 1px solid rgb(55 153 155);
+    border: 1px solid white;
     padding: .3rem 3rem .3rem 1.5rem;
     width: 85%;
     border-radius: 3rem;
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    transition: all .1s ease-in-out;
     font-size: .8rem;
+    color: #fff;
 }
 .profile-button button:hover{
     border: 1px solid #fff;
-    background-color: rgb(55 153 155);
+    background-color: blueviolet;
     color:white;
 }
 .profile-button-position{

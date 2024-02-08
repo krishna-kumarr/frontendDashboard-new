@@ -5,6 +5,7 @@ import { CgProfile } from "react-icons/cg";
 import { SiTask } from "react-icons/si";
 import { IoExitSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { FaShieldVirus } from "react-icons/fa";
 
 
 export const UserSidebar = () =>{
@@ -60,6 +61,17 @@ export const UserSidebar = () =>{
                                     </div>
                                 </div>
                             </li>
+
+                            <li className="nav-item p-0 my-2 col-12" onClick={()=>pageRender("/user/user-security-practice")}>
+                            <div className="nav-link logo ps-3" >
+                                <div className="col-3 logo-icon">
+                                    <FaShieldVirus className="fs-4"/>
+                                </div>
+                                <div className="col-9 ps-3 logo-content">
+                                    <p className="m-0">Security pactices</p>
+                                </div>
+                            </div>
+                        </li>
                         </ul>
                     </div>
 

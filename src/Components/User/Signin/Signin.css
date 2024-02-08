@@ -1,7 +1,4 @@
-:root{
-    --div-height:100vh;
-    --nav-height:95vh;
-}
+
 .form-element input{
     padding: .5rem 1rem;
     border-radius: 6px;
@@ -12,9 +9,9 @@
 .form-button button{
     border-radius: 6px;
     border-width: 0px;
-    background-color: rgb(55 153 155);
+    background-color: white;
     padding: .3rem 1rem;
-    color: white;
+    color: blueviolet;
 }
 .leftSide-signin{
     display: flex;
@@ -25,12 +22,12 @@
 .rightSide-signIn{
     border: 1px solid rgba(128, 128, 128, 0.212);
     border-radius: 20px 0 0 20px;
-    height: calc(var(--div-height) - 5vh);
+    height: 95vh;
     color:white;
-    background-color: rgb(55 153 155);
+    background-color: rgba(245, 245, 245, 0.082);
 }
 .rightSide-content{
-    height: calc(var(--div-height) - 5vh);
+    height: 95vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -38,6 +35,6 @@
    
 }
 .register{
-    color: rgb(55 153 155);
+    color: rgb(176, 97, 212);
     cursor: pointer;
 }

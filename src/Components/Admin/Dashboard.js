@@ -3,10 +3,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { TiTickOutline } from "react-icons/ti";
 import { ImCancelCircle } from "react-icons/im";
 import { updateUsersArray } from "../Redux/Redux";
-import { AiTwotoneMessage } from "react-icons/ai";
+import { AiOutlineMessage } from "react-icons/ai";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import './Admin-css/Header.css'
 
 export const Dashboard= () =>{
     const State = useSelector(
@@ -56,8 +55,8 @@ export const Dashboard= () =>{
 
     return(
         <>
-            <div className="col-12 header">
-                <nav className="navbar navbar-expand-lg bg-body-tertiary border-bottom ">
+            <div className="col-12">
+                <nav className="navbar navbar-expand-lg border-bottom bg-transparent">
                     <div className="container-fluid">
                         {/* sidebar reducer toggle button  */}
                         <div className="col-5 col-lg-1">
@@ -91,8 +90,8 @@ export const Dashboard= () =>{
                         <div className="col-lg-7 d-none d-lg-block pt-3">
                             <div className="d-flex flex-wrap justify-content-end align-items-center">
                                 {/* message  */}
-                                <div className="col-lg-2 col-xl-1 text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropMessage">
-                                    <IoMdNotificationsOutline className="fs-3 text-secondary "/>
+                                <div className="col-lg-2 col-xl-1 text-light text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropMessage">
+                                    <IoMdNotificationsOutline className="fs-3"/>
                                     {   
                                         messCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -103,8 +102,8 @@ export const Dashboard= () =>{
                                     }
                                 </div>
                                 {/* notification  */}
-                                <div className="col-lg-2 col-xl-1 text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropNotification">
-                                    <AiTwotoneMessage className="fs-3 text-secondary "/>
+                                <div className="col-lg-2 col-xl-1 text-light text-center admin-notifuicaion position-relative cursor" data-bs-toggle="modal" data-bs-target="#staticBackdropNotification">
+                                    <AiOutlineMessage className="fs-3"/>
                                     {   
                                         notifyCount>0 ? 
                                             <span className="position-absolute top-0 start-75 translate-middle badge rounded-pill bg-danger">
@@ -128,7 +127,7 @@ export const Dashboard= () =>{
                     <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h1 className="modal-title fs-5" id="staticBackdropLabel">Notifications</h1>
+                                <h1 className="modal-title fs-5 text-dark" id="staticBackdropLabel">Notifications</h1>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
@@ -137,7 +136,7 @@ export const Dashboard= () =>{
                                         <div className="col-12 d-flex flex-wrap">
                                             {State.usersArray.map((val,ind)=>{
                                                 return val.requesToAdmin!=="accepted" ? <div className="col-12 col-md-6 col-lg-3 d-flex flex-wrap border p-3 m-1" key={ind}>
-                                                                <div className="col-6 text-center">
+                                                                <div className="col-6 text-center text-dark">
                                                                 {val.firstName} {val.lastName}
                                                                 </div>
                                                                 <div className="col-6 d-flex flex-wrap ">
@@ -157,7 +156,7 @@ export const Dashboard= () =>{
                                         </div>
                                     :
                                         <div className="col-12 text-center">
-                                            <p>No notification....</p>
+                                            <p className="text-secondary">No notification....</p>
                                         </div>
                                 }
                             </div>
@@ -187,7 +186,7 @@ export const Dashboard= () =>{
                                     <div className="col-12 d-flex flex-wrap">
                                         <div className="col-12 dialog-box-profile text-center">
                                             <img src="https://static-00.iconduck.com/assets.00/user-2-account-icon-512x511-66843qcp.png" alt="profile" />
-                                            <p className="text-center mt-3">Welcome {State.AdminLogin}</p>
+                                            <p className="text-center mt-3">Welcome <span>{State.AdminLogin}</span></p>
                                         </div>
                                     </div>
                                 </div>

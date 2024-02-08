@@ -16,22 +16,152 @@ export const Slice = createSlice({
                 TimeLineCharts:[
                             {
                                 heading:"Html",
+                                image:"https://www.shutterstock.com/image-photo/html-inscription-against-laptop-code-260nw-1851522412.jpg",
                                 textareaCnt:"The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript",
                                 status: 'not started'
                             },
                             {
                                 heading:"Css",
+                                image:"https://cronuts.digital/wp-content/uploads/2020/04/Artboard-11-1024x724.png",
                                 textareaCnt:"Cascading Style Sheets is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.",
                                 status:"not started'"
                             },
                             {
+                                heading:"Sass",
+                                image:"https://uploads.sitepoint.com/wp-content/uploads/2013/03/1501598563featured-getting-started-sass.jpg",
+                                textareaCnt:"Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Bootstrap",
+                                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRsX5atOR9Defm5JgkzMGWMVw7DNrbFTMOsQ&usqp=CAU",
+                                textareaCnt:"Bootstrap is an HTML, CSS and JS library that focuses on simplifying the development of informative web pages (as opposed to web applications). The primary purpose of adding it to a web project is to apply Bootstrap's choices of color, size, font and layout to that project.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Tailwind",
+                                image:"https://miro.medium.com/v2/resize:fit:1400/1*_6ooq0R60ba3UT5c-QVemA.png",
+                                textareaCnt:"Tailwind CSS is an open source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables. Instead, it creates a list of 'utility' CSS classes that can be used to style each element by mixing and matching",
+                                status:"not started'"
+                            },
+                            {
                                 heading:"Javascrit",
+                                image:"https://dev-updates-uploads.s3.ap-south-1.amazonaws.com/1696168910152-Why%20JavaScript%20is%20Popular.jpg",
                                 textareaCnt:"JavaScript, often abbreviated as JS, is a programming language and core technology of the World Wide Web, alongside HTML and CSS. As of 2024, 98.9% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries",
                                 status:"not started'"
                             },
                             {
+                                heading:"TypeScript",
+                                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKHlajw0HzGzCzM_t6p6itMenwO2CzPZq9L4qshEmDYculDHiK6Z1x59mcpVUCgjusaqs&usqp=CAU",
+                                textareaCnt:"TypeScript extends JavaScript and enhances the developer experience. It helps software developers add type safety to their projects and provides features like type aliases, interfaces, abstract classes, encapsulation, inheritance, and function overloading.",
+                                status:"not started'"
+                            },
+                            {
                                 heading:"React js",
+                                image:"https://www.mobinius.com/wp-content/uploads/2020/02/reactjs-2.png",
                                 textareaCnt:"React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Angular js",
+                                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7DuYsoETlLOZqOpytRClmcHHDF7qnPZVDKdsgEnvLvtqyCiq4zcj1OPfYW-h6nQAymkw&usqp=CAU",
+                                textareaCnt:"Angular is a platform and framework for building single-page client applications using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional functionality as a set of TypeScript libraries that you import into your applications.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Vue js",
+                                image:"https://images.prismic.io/northcoders/NzIxNjIyM2ItNDY0NC00MWRhLWEzM2UtM2IyZThkM2JhMWNl_vuejs.jpeg?auto=compress%2Cformat&rect=0%2C0%2C1280%2C720&w=800&fit=max&q=60",
+                                textareaCnt:"Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based programming model that helps you efficiently develop user interfaces, be they simple or complex.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Redux",
+                                image:"https://www.pistalix.in/wp-content/uploads/2018/10/redux_centre.png",
+                                textareaCnt:"Redux allows you to manage your app's state in a single place and keep changes in your app more predictable and traceable, making it easier to understand the changes happening in your app. But all of these benefits come with a set of challenges",
+                                status:"not started"
+                            },
+                            {
+                                heading:"Redux Toolkit",
+                                image:"https://www.freecodecamp.org/news/content/images/2023/03/Freecodecamp-Banner.png",
+                                textareaCnt:"Redux Toolkit is a set of tools you can use for state management in React in place of Redux. The Redux team created it. Redux Toolkit offers a standardized approach to building Redux code and comes with libraries and tools that make it simpler to create scalable, maintainable, and effective Redux code",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Redux Saga",
+                                image:"https://redux-saga.js.org//img/Redux-Saga-Logo-Portrait.png",
+                                textareaCnt:"Redux Saga is a middleware library used to allow a Redux store to interact with resources outside of itself asynchronously. This includes making HTTP requests to external services, accessing browser storage, and executing I/O operations",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Graph QL",
+                                image:"https://graphql.org/img/og-image.png",
+                                textareaCnt:"GraphQL is an open-source data query and manipulation language for APIs and a query runtime engine. GraphQL enables declarative data fetching where a client can specify exactly what data it needs from an API",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Git",
+                                image:"https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/191948265/original/3dcb6660d0eab6eaba4db3a2963b337da9954cf3/help-you-with-git.png",
+                                textareaCnt:"Git is a DevOps tool used for source code management. It is a free and open-source version control system used to handle small to very large projects efficiently. Git is used to tracking changes in the source code, enabling multiple developers to work together on non-linear development.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Github",
+                                image:"https://www.webfx.com/wp-content/uploads/2022/08/github-logo.png",
+                                textareaCnt:"GitHub allows you to create, store, change, merge, and collaborate on files or code. Any member of a team can access the GitHub repository (think of this as a folder for files) and see the most recent version in real-time. Then, they can make edits or changes that the other collaborators also see",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Next js",
+                                image:"https://soshace.com/wp-content/uploads/2019/10/Getting-Started-with-NextJS.jpg",
+                                textareaCnt:"Next.js is a React framework for building full-stack web applications. You use React Components to build user interfaces, and Next.js for additional features and optimizations.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Node js",
+                                image:"https://blog.cdn.cmarix.com/blog/wp-content/uploads/2023/05/ultimate-guide-to-node-js-streams.webp",
+                                textareaCnt:"It is used for server-side programming, and primarily deployed for non-blocking, event-driven servers, such as traditional web sites and back-end API services, but was originally designed with real-time, push-based architectures in mind. Every browser has its own version of a JS engine, and node.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Express js",
+                                image:"https://blog.logrocket.com/wp-content/uploads/2020/12/express-middlewares-complete-guide.png",
+                                textareaCnt:"Express.js is the most popular web framework for Node.js. It is designed for building web applications and APIs and has been called the de facto standard server framework for Node.js.Building a backend from-scratch for an application in Node.js can be tedious and time consuming. From setting up ports to route handlers, writing all of the boilerplate code takes away from what really matters, which is writing the business logic for an application. By using web frameworks like Express.js, developers can save time and focus on other important tasks.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Mongo DB",
+                                image:"https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png",
+                                textareaCnt:"MongoDB handles the conversion of JSON and JSON-like documents, such as BSON, into Java objects effortlessly, making the reading and writing of data in MongoDB fast and incredibly efficient when analyzing real-time information across multiple development environments.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Mongo DB Atlas",
+                                image:"https://techcrunch.com/wp-content/uploads/2016/06/2016-06-27_1940.png",
+                                textareaCnt:"MongoDB Atlas is a fully-managed cloud database that handles all the complexity of deploying, managing, and healing your deployments on the cloud service provider of your choice (AWS , Azure, and GCP). MongoDB Atlas is the best way to deploy, run, and scale MongoDB in the cloud.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Mongoose",
+                                image:"https://miro.medium.com/v2/resize:fit:1400/1*Wdqpcm8EeHlbfjza-qOgew.png",
+                                textareaCnt:"Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node. js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"CORS policy errors",
+                                image:"https://i.ibb.co/Vv46CBc/ASP-NET-Cors-error-fix.png",
+                                textareaCnt:"CORS errors happen when a webpage makes a request to a different domain than the one that served the page, and the server responds with an HTTP error because the “Origin” header in the request is not allowed by the server's CORS configuration.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Package manager",
+                                image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNrSGHtpML2l6ak9tMDNKCA_IsFd0toqXaNOVT-uoKYyxfSj88vjZAMZ3hIKwxAb3Ekk&usqp=CAU",
+                                textareaCnt:"A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner.",
+                                status:"not started'"
+                            },
+                            {
+                                heading:"Mongoose",
+                                image:"https://miro.medium.com/v2/resize:fit:1400/1*Wdqpcm8EeHlbfjza-qOgew.png",
+                                textareaCnt:"Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node. js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.",
                                 status:"not started'"
                             }
                         ],
@@ -76,7 +206,8 @@ export const Slice = createSlice({
             },
             {
                 title:"Using modern frameworks",
-                therory:"Often, web application front ends are built using commonly available frameworks. These frameworks make up the core of your web application's front end, and any security vulnerability within this framework can lead to a compromise of your web application as a whole.Using modern and frequently updated frameworks can help boost your web application's security. These frameworks frequently include built-in authentication handlers and other security features that help standardize the security practises needed for your web application."
+                therory:"Often, web application front ends are built using commonly available frameworks. These frameworks make up the core of your web application's front end, and any security vulnerability within this framework can lead to a compromise of your web application as a whole.Using modern and frequently updated frameworks can help boost your web application's security. These frameworks frequently include built-in authentication handlers and other security features that help standardize the security practises needed for your web application.",
+                reference:"https://frontendmastery.com/posts/frontend-security-primer/"
             },
             {
                 title:"Auditing of 3rd-party libraries in use",
@@ -84,11 +215,13 @@ export const Slice = createSlice({
             },
             {
                 title:"Avoiding iFrames where possible",
-                therory:"While iFrames make your development process easier by allowing you to incorporate/load other pages/frames in your existing view, iFrames usage is often used without appropriate X-Frame-Options. Unfortunately, this allows for clickjacking attacks and the compromise of your web application's integrity.iFrame-based attacks can be used to play videos, open malicious forms (which look legitimate), and trick users into downloading malicious content that can lead to a degraded overall experience of your web application."
+                therory:"While iFrames make your development process easier by allowing you to incorporate/load other pages/frames in your existing view, iFrames usage is often used without appropriate X-Frame-Options. Unfortunately, this allows for clickjacking attacks and the compromise of your web application's integrity.iFrame-based attacks can be used to play videos, open malicious forms (which look legitimate), and trick users into downloading malicious content that can lead to a degraded overall experience of your web application.",
+                reference:"https://www.reflectiz.com/blog/iframe-security/"
             },
             {
                 title:"Restricting available Feature Policy",
-                therory:"By default, your web application can access or request any feature from your end user's device—while this may be a nice-to-have during the development stage, if left enabled it can lead to attackers exploiting your web application and using these unrestricted feature flags/policies to ask end users' devices to enable certain features that appear legitimately offered by your web application itself.Using the Feature-Policy HTTP header is ideal for preventing such requests from originating from your web application.For example, setting the following Feature-Policy will alert the end users' web browsers to not enable these features, even if requested by your web application:."
+                therory:"By default, your web application can access or request any feature from your end user's device—while this may be a nice-to-have during the development stage, if left enabled it can lead to attackers exploiting your web application and using these unrestricted feature flags/policies to ask end users' devices to enable certain features that appear legitimately offered by your web application itself.Using the Feature-Policy HTTP header is ideal for preventing such requests from originating from your web application.For example, setting the following Feature-Policy will alert the end users' web browsers to not enable these features, even if requested by your web application:.",
+                reference:"https://developer.mozilla.org/en-US/docs/Web/HTTP/Permissions_Policy"
             },
             {
                 title:"Input Validation",
@@ -98,14 +231,17 @@ export const Slice = createSlice({
             {
                 title:"Secure Communication",
                 therory:"Always use HTTPS to encrypt data transmitted between the client and server. Ensure that your API endpoints and external resources are also secured with HTTPS",
+                reference:"https://thenewstack.io/secure-the-web-with-an-api-driven-backend-for-frontend/"
             },
             {
                 title:"Authentication and Authorization",
                 therory:"Implement strong user authentication and authorization mechanisms. Ensure that only authorized users can access sensitive parts of your frontend",
+                reference:"https://zivukushingai.medium.com/everything-you-need-to-know-about-frontend-and-backend-authentication-ultimate-guide-7142a752249c"
             },
             {
                 title:"Avoid Hardcoding Secrets",
                 therory:"Implement strong user authentication and authorization mechanisms. Ensure that only authorized users can access sensitive parts of your frontend",
+                reference:"https://blog.logrocket.com/best-practices-for-managing-and-storing-secrets-in-frontend-development/"
             }
         ]
     },

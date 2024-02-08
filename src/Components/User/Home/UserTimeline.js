@@ -118,15 +118,15 @@ export const UserTimeline = () =>{
                     <div className="d-flex flex-wrap">
                         <UserNavbar/>
 
-                        <div className="col-12 container mt-5 user-timeline-chart-height shadow overflow-scroll">
+                        <div className="col-12 container mt-5 user-timeline-chart-height overflow-scroll">
                             <div className="timeline col-12">                             
                                 <div className="accordion mt-2" id="accordionExample">
                                     {
                                         timelineArray.map((val,ind)=>{
-                                                return <div className="accordion-item text-center border-top py-3 col-12" key={ind}>
+                                                return <div className="accordion-item bg-transparent text-center border-top py-3 col-12" key={ind}>
                                                         <h4 className="accordion-header" id={"heading"+ind}>
-                                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse"+ind} aria-expanded={ind==0 ?"true" : "false"} aria-controls={"collapse"+ind}>
-                                                            {val.title}
+                                                        <button className="accordion-button bg-transparent text-start" type="button" data-bs-toggle="collapse" data-bs-target={"#collapse"+ind} aria-expanded={ind==0 ?"true" : "false"} aria-controls={"collapse"+ind}>
+                                                            {ind+1} .{val.title}
                                                         </button>
                                                         </h4>
                                                         <div id={"collapse"+ind} className={ind===0 ?"accordion-collapse collapse show":"accordion-collapse collapse"} aria-labelledby={"heading"+ind} data-bs-parent="#accordionExample">

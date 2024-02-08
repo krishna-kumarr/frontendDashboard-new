@@ -1,29 +1,44 @@
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
+}
 .security-practice-chart-height{
     min-height: 85vh;
     max-height: 85vh;
 }
 .set-solving-height{
-    min-height: 3.5rem;
-    max-height: 3.5rem;
+    min-height: 4.5rem;
+    max-height: 4.5rem;
     overflow: hidden;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .read-more-btn{
-    background-color: rgb(55 153 155);
+    background-color: var(--btn-background);
+    color:white;
     padding: .2rem .5rem;
     border-radius: .3rem;
     cursor: pointer;
 }
 .security-practice-modal-content{
-    min-height: 80vh;
-    max-height: 80vh;
+    min-height: 60vh;
+    max-height: 60vh;
     overflow: scroll;
 }
 .set-solving-model{
-    font-size: .85rem;
+    font-size:1rem;
 }
 .add-securityPractices-btn,.add-types-btn{
-    background-color: rgb(55 153 155);
+    background-color: var(--btn-background);
+    color:var(--imp-heading-color);
     padding: .2rem .5rem;
     border-radius: .5rem;
+}
+.addsecurity-input{
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+.important-heading{
+    color:var(--imp-heading-color);
+
 }

@@ -118,7 +118,7 @@ export const ExistingTimeline = () =>{
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="modal-header">
-                                        <h1 className="modal-title fs-5" id="staticBackdropLabel">Add new Content</h1>
+                                        <h1 className="modal-title text-dark fs-5" id="staticBackdropLabel">Add new Content</h1>
                                     </div>
                                     <div className="modal-body col-12 d-flex flex-wrap justify-content-center">
                                         <div className="col-12 d-flex flex-wrap justify-content-center create-timeline-content mt-4">
@@ -156,7 +156,7 @@ export const ExistingTimeline = () =>{
                                         {err && createTimeLine.title==="" ? <p className="m-0 text-danger text-center col-12">Title name required</p>: null}
                                     </>
                                 :
-                                    <h4 className="my-5 text-center col-12">{createTimeLine.title}</h4>
+                                    <h4 className="my-5 text-center text-dark col-12">{createTimeLine.title}</h4>
                             }
 
                             {/* displaying timeline cards  */}
@@ -164,8 +164,8 @@ export const ExistingTimeline = () =>{
                                 {
                                     createTimeLine.TimeLineCharts.map((val,ind)=>{
                                         return <li className="m-0" key={ind}>
-                                                <div className="shadow timeline-content p-4">
-                                                    <h5>{val.heading}</h5>
+                                                <div className="shadow timeline-content text-dark p-4">
+                                                    <h4>{val.heading}</h4>
                                                     <p>{val.textareaCnt}</p>
                                                 </div>
                                             </li>

@@ -3,6 +3,12 @@
     padding: 0px;
     box-sizing: border-box;
 }
+:root{
+    --btn-background:rgb(55 153 155);
+    --border-color:rgb(55 153 155);
+    --imp-heading-color:rgb(55 153 155);
+}
+
 .user-sidebar-collapse{
     min-width: 5rem!important;
     max-width: 5rem!important;
@@ -44,7 +50,6 @@
     right: 0;
     height: 80%;
     width: 3px;
-    background-color: rgb(55 153 155);
     transform: scale(0);
     transform-origin: right bottom;
     transition: all .3s ease-in-out;
@@ -54,7 +59,7 @@
     transform-origin: center;
 }
 .active{
-    color: rgb(55 153 155) !important;
+    color: var(--imp-heading-color) !important;
 }
 .log-out{
     position: absolute;
