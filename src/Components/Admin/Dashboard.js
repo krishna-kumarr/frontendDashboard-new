@@ -15,6 +15,9 @@ export const Dashboard= () =>{
     const dispatch = useDispatch()
     const [messCount,setMessCount] = useState(0)
     const [notifyCount,setNotifyCount] = useState(0)
+    const [messageObject,setMessageObject] = useState([])
+    const [messageBoxRightSide,setMessageBoxRightSide] = useState(true)
+    const [messageBoxRightsideObject,setMessageBoxRightsideObject] = useState({})
 
     useEffect(()=>{
         var messageCount = State.usersArray.filter((v,i)=>{
@@ -22,8 +25,11 @@ export const Dashboard= () =>{
         })
         setMessCount(messageCount.length)
 
-        
-    })
+        var userMessageObject =State.message.filter((v,i)=>{
+            return v.name === "Admin" ? v : null
+        })
+        setMessageObject(userMessageObject)
+    },[])
 
     const handleHideSidebar = () =>{
         var hide = document.getElementsByClassName('logo-content');
@@ -54,6 +60,11 @@ export const Dashboard= () =>{
             return v.id===accept ? {...v,requesToAdmin:"denied"}:v
         })
         dispatch(updateUsersArray(acceptedUser))
+    }
+
+    const handleUserMessageData = (messageObject) =>{
+        setMessageBoxRightSide(false    )
+        setMessageBoxRightsideObject(messageObject)
     }
 
     return(
@@ -175,12 +186,46 @@ export const Dashboard= () =>{
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
-                                <div className="col-12 ps-5 d-flex flex-wrap message-box-height">
-                                    <div className="col-5 position-sticky top-0">
-
+                                <div className="col-12 d-flex flex-wrap message-box-height">
+                                    <div className="col-3 position-sticky start-0 overflow-scroll border-end d-flex flex-wrap">
+                                        <div className="col-12 d-flex flex-column">
+                                            {
+                                                messageObject.map((value,index)=>{
+                                                    return value.message.map((v,i)=>{
+                                                        return  <div className="col-12 py-2 d-flex flex-wrap border-bottom align-items-center pointer" key={index} onClick={()=>handleUserMessageData(v)}>
+                                                                    <div className="col-4 message-box-user">
+                                                                        <img src="https://static-00.iconduck.com/assets.00/user-2-account-icon-512x511-66843qcp.png" alt="chat-user-image"/>
+                                                                    </div>
+                                                                    <div className="col-6">
+                                                                        <p className="m-0">{Object.keys(v)}</p>
+                                                                    </div>
+                                                                    {
+                                                                        value.count!==0 ? 
+                                                                            <div className="col-2 message-count-para-width">
+                                                                                <p className="m-0 text-light bg-danger">{value.count}</p>
+                                                                            </div>
+                                                                        :   
+                                                                            null
+                                                                    }
+                                                                    
+                                                                </div>
+                                                    })
+                                                })
+                                            }
+                                        </div>
                                     </div>
-                                    <div className="col-7">
-
+                                    <div className="col-9 d-flex flex-wrap justify-content-center align-items-center">
+                                            {
+                                                messageBoxRightSide ? <div className="col-5 text-center">
+                                                        <p>Welcome to frontend chat box</p>
+                                                    </div>
+                                                :
+                                                    <div className="col-12 position-reative">
+                                                        <div className="position-absolute top-0">
+                                                            <p>{Object.keys(messageBoxRightsideObject)}</p>
+                                                        </div>
+                                                    </div>
+                                            } 
                                     </div>
                                 </div>
                             </div>

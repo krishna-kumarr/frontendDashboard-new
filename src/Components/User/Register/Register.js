@@ -71,26 +71,36 @@ export const Register = () =>{
                                 }
                              
                                 userAccessTimeLineArray[userAccessTimeLineArray.length]=spread
-                                console.log(userAccessTimeLineArray)
                                 dispatch(updateUserAccessTimeLineArray(userAccessTimeLineArray))
                             }
                             addUsers[addUsers.length]=regData
                             dispatch(updateUsersArray(addUsers))
 
-                        // //message code
-                        //     var list2=[]
-                        //     for(var a=0;a<State.message.length;a++){
-                        //         var spreadExistingUserObject={...State.message[a]}
-                        //         var spreadExistingUserArray=[...spreadExistingUserObject.message]
-                        //         for(var b=0;b<addUsers.length;b++){
-                        //             var obj3 = {[addUsers[b].userName]:[]}
-                        //             spreadExistingUserArray.push(obj3)
-                        //             spreadExistingUserObject.message=spreadExistingUserArray 
-                        //         }
-                        //         list2[list2.length]=spreadExistingUserObject //Existing User message array name addition
-                        //     }
-                        //     console.log(list2)
-                        //     dispatch(updateMessage(list2))
+                        //message code
+                            var list2=[]
+                            //Existing User message array of object creation
+                            for(var a=0;a<State.message.length;a++){
+                                var spreadExistingUserArray=[...State.message[a].message]
+                                var obj3 = {[regData.userName]:[]}
+                                spreadExistingUserArray.push(obj3)
+
+                                var spreadExistingUserObject={...State.message[a]}
+                                spreadExistingUserObject.message=spreadExistingUserArray 
+
+                                list2[list2.length]=spreadExistingUserObject 
+                            }
+                            //New User message object creation
+                            var newUserObject = {name:regData.userName,message:[{admin:[]}],count:0}
+                            for(var b=0;b<addUsers.length;b++){
+                                if(addUsers[b].userName!==regData.userName){
+                                    var spreadNewUSerArray = [...newUserObject.message]
+                                    var obj4 = {[addUsers[b].userName]:[]}
+                                    spreadNewUSerArray.push(obj4)
+                                    newUserObject.message=spreadNewUSerArray 
+                                }
+                            }
+                            list2[list2.length]=newUserObject
+                            dispatch(updateMessage(list2))
 
                             alert("registration success")
                             pageRender("/user/signIn")
@@ -134,22 +144,22 @@ export const Register = () =>{
                     dispatch(updateUsersArray(addUsers))
 
                 // //message code
-                //     var list=[]
-                //     var spreadMessage={...State.message[0]}
-                //     var spreadMessageZero=[...spreadMessage.message]
-                //     var obj1 = {[regData.userName]:[]}
-                //     spreadMessageZero.push(obj1)
-                //     spreadMessage.message=spreadMessageZero 
-                //     list[list.length]=spreadMessage //for admin
+                    var list=[]
+                    var spreadMessage={...State.message[0]}
+                    var spreadMessageZero=[...spreadMessage.message]
+                    var obj1 = {[regData.userName]:[]}
+                    spreadMessageZero.push(obj1)
+                    spreadMessage.message=spreadMessageZero 
+                    list[list.length]=spreadMessage //for admin
 
-                //     var NewUserObject={...messageObject} 
-                //     var spreadNewUserMessage=[...NewUserObject.message]
-                //     NewUserObject.name=regData.userName
-                //     var obj2 ={"admin":[]}
-                //     spreadNewUserMessage.push(obj2)
-                //     NewUserObject.message=spreadNewUserMessage
-                //     list[list.length]=NewUserObject //for user
-                //     dispatch(updateMessage(list))
+                    var NewUserObject={...messageObject} 
+                    var spreadNewUserMessage=[...NewUserObject.message]
+                    NewUserObject.name=regData.userName
+                    var obj2 ={"admin":[]}
+                    spreadNewUserMessage.push(obj2)
+                    NewUserObject.message=spreadNewUserMessage
+                    list[list.length]=NewUserObject //for user
+                    dispatch(updateMessage(list))
 
 
                     alert("registration success")
@@ -173,7 +183,6 @@ export const Register = () =>{
                 setErr(false)
             },2000)
         }
-        console.log(State)
     }
 
     return(
